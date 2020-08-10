@@ -20,11 +20,11 @@ I cost a week to finish this program. Most of my time is spent on learning QT an
 
 ## 成果展示(The Accomplishment)
 
-![image-20200810221645561](.\pics\image-20200810221645561.png)
+![image-20200810221645561](pics/image-20200810221645561.png)
 
-![image-20200810221856758](.\pics\image-20200810221645562.png)
+![image-20200810221856758](pics/image-20200810221645562.png)
 
-![image-20200810222133727](.\pics\image-20200810222133727.png)
+![image-20200810222133727](pics/image-20200810222133727.png)
 
 ## 参考(Reference)
 
