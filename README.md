@@ -10,7 +10,7 @@ This repository shows all my valuable homework during college life. Most of them
 
 ## Sophomore Projects
 
-- 基于A*算法的贪吃蛇 (Greedy Snake Based on A star)
+- [基于A*算法的贪吃蛇 (Greedy Snake Based on A Star)](./Greedy-Snake/README.md)
 - 基于舞蹈链算法的数独 (Sudoku based on Dancing link)
 
 
