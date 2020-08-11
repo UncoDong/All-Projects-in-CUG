@@ -9,7 +9,7 @@ Software Architecture is a course with the most homework, including 3 projects a
 ## Projects
 
 - [亚马逊云消息队列 (AWS Queue)](AWSQueue\README.md) 
-- 三层架构 (Three-Tier Architecture)
+- [三层架构 (Three-Tier Architecture)](Three-Tier\README.md) 
 - REST&SOAP风格接口 (REST&SOAP interface)
 
 

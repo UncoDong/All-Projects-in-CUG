@@ -6,23 +6,23 @@ Using  Message middleware based on AWS SQS and develop a sending client and a re
 
 ## 成果展示(The Accomplishment)
 
-![image-20200811084836806](C:\Users\UncleDong\AppData\Roaming\Typora\typora-user-images\image-20200811084836806.png)
+![image-20200811084836806](pics\image-20200811084836806.png)
 
 <center>Architecture Design </center>
 
-![image-20200811085030604](C:\Users\UncleDong\AppData\Roaming\Typora\typora-user-images\image-20200811085030604.png)
+![image-20200811085030604](pics\image-20200811085030604.png)
 
 <center>SNS </center>
 
-![image-20200811085100953](C:\Users\UncleDong\AppData\Roaming\Typora\typora-user-images\image-20200811085100953.png)
+![image-20200811085100953](pics\image-20200811085100953.png)
 
 <center>Client</center>
 
-![image-20200811085140511](C:\Users\UncleDong\AppData\Roaming\Typora\typora-user-images\image-20200811085140511.png)
+![image-20200811085140511](pics\image-20200811085140511.png)
 
 <center>SQS Client</center>
 
-![image-20200811085217976](C:\Users\UncleDong\AppData\Roaming\Typora\typora-user-images\image-20200811085217976.png)
+![image-20200811085217976](pics\image-20200811085217976.png)
 
 <center>Output of the SQS</center>
 
