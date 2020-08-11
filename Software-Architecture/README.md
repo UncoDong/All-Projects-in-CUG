@@ -1,20 +1,21 @@
+# :house:Software Architecture
 
+软件体系结构是作业最多的一门课程，分为三个大实习和多个小作业。
 
-# :triangular_ruler:Sudoku based on Dancing Links
-
-该数独游戏也使用QT进行UI开发，使用了舞蹈链算法。相比传统的DFS算法，舞蹈链算法更适合复杂的情况。
-
-The UI of this game was also developed by QT. Compared with traditional DFS algorithm, the dancing links could adapt more complex games.
-
-## 成果展示(The Accomplishment)
-
-![image-20200810233424499](C:\Users\UncleDong\AppData\Roaming\Typora\typora-user-images\image-20200810233424499.png)
+Software Architecture is a course with the most homework, including 3 projects and many homeworks.
 
 
 
-因为默认是最难的棋盘，因此在点击“显示答案”的时候会计算很久。当然，如果用DFS的话几乎无法算出结果，这是我试验过的。
+## Projects
 
-Because the first game is the hardest, so when you click *显示答案* , it will caculate for a long time. Of course the DFS algorithm will spend much more time then it, I have tested it.
+- [亚马逊云消息队列 (AWS Queue)](AWSQueue\README.md) 
+- 三层架构 (Three-Tier Architecture)
+- REST&SOAP风格接口 (REST&SOAP interface)
 
-![image-20200810233525303](C:\Users\UncleDong\AppData\Roaming\Typora\typora-user-images\image-20200810233525303.png)
 
+
+## HomeWork
+
+- 观察者模式 (Observer Pattern)
+- 播放器插件 (Plug of Music Player)
+- 其他作业 (Other Homeworks)
