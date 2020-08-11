@@ -1,0 +1,63 @@
+package com.sample.rules
+ 
+import com.sample.DroolsTest.Score;
+ 
+ rule "A"
+ 	when
+ 		$s : Score(score>90)
+ 	then
+ 	 	System.out.println("A");
+		$s.SetOutput("A");
+end
+rule "ScoreB+"
+    when 
+        $s : Score(score >=87&&score<=89) 
+    then
+    	System.out.println("B+");
+    	$s.SetOutput("B+");
+end
+rule "ScoreB"
+    when 
+        $s : Score(score >=80&&score<=86)     
+    then
+    System.out.println("B");
+        $s.SetOutput("B");
+end
+rule "ScoreC+"
+    when 
+        $s : Score(score >=77&&score<=79)
+        
+    then
+    System.out.println("C+");
+        $s.SetOutput("C+");
+end
+rule "ScoreC"
+    when 
+        $s : Score(score >=70&&score<=76)   
+    then
+    System.out.println("C");
+        System.out.println("C");
+end
+rule "ScoreD+"
+    when 
+        $s : Score(score >=67&&score<=69)
+        
+    then
+        $s.SetOutput("D+");
+end
+rule "ScoreD"
+    when 
+        $s : Score(score >=60&&score<=66)
+        
+    then
+    System.out.println("D");
+        $s.SetOutput("D");
+end
+rule "ScoreF"
+    when 
+        $s : Score(score < 60)
+        
+    then
+    System.out.println("F");
+        $s.SetOutput("F");
+end
