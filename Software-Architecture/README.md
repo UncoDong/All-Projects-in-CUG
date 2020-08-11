@@ -18,4 +18,4 @@ Software Architecture is a course with the most homework, including 3 projects a
 
 - [观察者模式 (Observer Pattern)](Homeworks\Observer\README.md)
 - [播放器插件 (Plug of Music Player)](Homeworks\MusicPlug\README.md)
-- 其他作业 (All Other Homeworks)
+- [其他作业 (All Other Homeworks)](Homeworks\All-reports\README.md)
