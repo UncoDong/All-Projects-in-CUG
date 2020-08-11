@@ -6,19 +6,19 @@ A simple plug of music playerin order to change type of music file like mp3 or m
 
 ## 成果展示(The Accomplishment)
 
-![image-20200811104636362](pics\image-20200811104636362.png)
+![image-20200811104636362](pics/image-20200811104636362.png)
 
 <center>Declare the Interface of Plug</center>
 
-![image-20200811104609314](pics\image-20200811104609314.png)
+![image-20200811104609314](pics/image-20200811104609314.png)
 
 <center>Using jar to play the music</center>
 
-![image-20200811104808746](pics\image-20200811104808746.png)
+![image-20200811104808746](pics/image-20200811104808746.png)
 
 <center>Load plug Dynamically</center>
 
-![image-20200811104840853](pics\image-20200811104840853.png)
+![image-20200811104840853](pics/image-20200811104840853.png)
 
 <center>Error when select wrong path</center>
 

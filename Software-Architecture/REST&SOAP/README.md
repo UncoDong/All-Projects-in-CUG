@@ -12,23 +12,23 @@ In this project, I developed client both on PC and Android to send messages to m
 
 ## 成果展示(The Accomplishment)
 
-![image-20200811100924847](pics\image-20200811100924847.png)
+![image-20200811100924847](pics/image-20200811100924847.png)
 
 <center>Choose REST and SOAP in IDEA</center>
 
-![image-20200811101257016](pics\image-20200811101257016.png)
+![image-20200811101257016](pics/image-20200811101257016.png)
 
 <center>Install dependence by maven</center>
 
-![image-20200811101442035](pics\image-20200811101442035.png)
+![image-20200811101442035](pics/image-20200811101442035.png)
 
 <center>Cilent on PC</center>
 
-![image-20200811101508033](pics\image-20200811101508033.png)
+![image-20200811101508033](pics/image-20200811101508033.png)
 
 <center>Cilent on Android</center>
 
-![image-20200811101628364](pics\image-20200811101628364.png)
+![image-20200811101628364](pics/image-20200811101628364.png)
 
 <center>Final Result</center>
 

@@ -8,11 +8,11 @@ Changing the Jave MVC program into MVP. MVC means Model, View, Controller, if ad
 
 ## 成果展示(The Accomplishment)
 
-![image-20200811110247064](pics\image-20200811110247064.png)
+![image-20200811110247064](pics/image-20200811110247064.png)
 
 <center>The Initial MVC</center>
 
-![image-20200811110349214](pics\image-20200811110349214.png)
+![image-20200811110349214](pics/image-20200811110349214.png)
 
 <center>The different between Presenter and Controller</center>
 

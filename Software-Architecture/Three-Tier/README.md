@@ -12,27 +12,27 @@ In this project, Client Tire was set in my local laptop, Business Logic Tier was
 
 ## 成果展示(The Accomplishment)
 
-![image-20200811091442102](pics\image-20200811091442102.png)
+![image-20200811091442102](pics/image-20200811091442102.png)
 
 <center>Architecture Design </center>
 
-![image-20200811092529551](pics\image-20200811092529551.png)
+![image-20200811092529551](pics/image-20200811092529551.png)
 
 <center>Interface Design</center>
 
-![image-20200811092631527](pics\image-20200811092631527.png)
+![image-20200811092631527](pics/image-20200811092631527.png)
 
 <center>Interfaces Encapsulating by Python (Database Tier)</center>
 
-![image-20200811093011254](pics\image-20200811093011254.png)
+![image-20200811093011254](pics/image-20200811093011254.png)
 
 <center>Test for Connect Through SQS (Business Logic Tier)</center>
 
-![image-20200811093058067](pics\image-20200811093058067.png)
+![image-20200811093058067](pics/image-20200811093058067.png)
 
 <center>Localhost Result (Client Tire)</center>
 
-![image-20200811093755047](pics\image-20200811093755047.png)
+![image-20200811093755047](pics/image-20200811093755047.png)
 
 <center>Three Tire</center>
 
