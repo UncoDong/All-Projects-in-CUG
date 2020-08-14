@@ -1,0 +1,359 @@
+
+nav {
+    background-color: rgba(255, 255, 255，0);
+    height: 300px;
+    width: 900px;
+    margin: 15px auto 0;
+}
+.id-nav {
+    /* background-color: skyblue; */
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+.id-nav li a{
+    display: inline-block;
+    padding-left: 20px;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: skyblue;
+    transition: background-color 0.5s;
+}
+.id-nav li a:hover {
+    background-color: rgb(112, 112, 112);
+    
+}
+
+.img-nav {
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: gainsboro;
+    transition: all 0.5s;
+}
+.img-nav:hover .prev,
+.img-nav:hover .next {
+    opacity: 0.3;
+}
+
+/* .prev,
+.next {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    top: 50%;
+    margin-top:-15px;
+    background: rgba(0,0,0);
+    line-height: 30px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: gold;
+    cursor: pointer;
+    user-select: none;
+    
+}
+.prev{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.next {
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.ball-nav {
+    position: absolute;
+    width: 80px;
+    height: 14px;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -40px;
+    background: rgba(0,0,0,.3);
+    border-radius: 14px;
+    align-content: center;
+}
+.ball-nav span {
+    float: left;
+    margin-top: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+.ball-nav .current{
+    background-color: rgba(255, 0, 0, 0.719);
+} */
+p {
+    text-align: center;
+    color: white;
+}
+.demo {
+    position: relative;
+    width: 900px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.822);
+    margin: 0px auto 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #aaa;
+
+}
+nav {
+    box-shadow: 2px 2px 3px rgb(24, 24, 24);
+}
+.demo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    background-color: rgba(0,0,0);
+    transition: opacity 0.5s;
+
+}
+.demo:hover::before{
+    opacity: 0.3;
+}
+.return-top {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: skyblue;
+    bottom: 50px;
+    left: 50%;
+    margin-left: 500px;
+    border-radius: 30px;
+    transition: all 0.5s;
+    box-shadow: 2px 2px 3px #aaa;
+}
+.return-top:hover {
+    
+    border-radius: 5px 5px 30px;
+    border-top-color: skyblue ;
+}
+footer {
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    padding: 10px;
+    padding-bottom: px;
+    margin: 0 auto 0;
+   
+   
+}
+.func {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(189, 69, 69, 0.822);
+}
+.demo-id {
+    padding-top: 65px;
+    background-color: rgb(102, 34, 34);
+    font-size: 0;
+}
+
+.demo a span {
+    position: absolute;
+    width: 75px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid skyblue ;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.3);
+    bottom: 25px;
+    right: 25px;
+    text-align: center;
+    line-height: 30px;
+}
+.box {
+    padding-top: 10px;
+    margin-top: 40px;
+    width: 100%;
+    height: 484px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.list {
+    width: 1400px;
+    height: 454px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -700px;
+}
+
+.btn {
+    position: fixed;
+    top: 270px;
+    
+    width: 60px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(135, 207, 235, 0.603);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.next {
+    right: 0;
+}
+
+.li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.im {
+    width: 945px;
+    height: 450px;
+    border: none;
+    float: left;
+    border: 2px black solid;
+}
+
+.p1 {
+    transform: translate3d(-224px, 0, 0) scale(0.81);
+}
+
+.p2 {
+    transform: translate3d(0px, 0, 0) scale(0.81);
+    transform-origin: 0 50%;
+    opacity: 0.8;
+    z-index: 2;
+    filter: blur(2px);
+}
+
+.p3 {
+    transform: translate3d(224px, 0, 0) scale(1);
+    z-index: 3;
+    opacity: 1;
+}
+
+.p4 {
+    transform: translate3d(449px, 0, 0) scale(0.81);
+    transform-origin: 100% 50%;
+    opacity: 0.8;
+    z-index: 2;
+    filter: blur(2px);
+}
+
+.p5 {
+    transform: translate3d(672px, 0, 0) scale(0.81);
+}
+
+.buttons {
+    position: absolute;
+    width: 1200px;
+    height: 30px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -600px;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.buttons a {
+    display: inline-block;
+    width: 35px;
+    height: 5px;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+.buttons a span {
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: white;
+}
+
+.buttons a .blue {
+    background: rgb(77, 96, 201);
+}
+.f{
+    position: relative;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.function {
+    filter: blur(50px);
+    position: absolute;
+    width: 100%;
+    
+    top: 0;
+    height: 0px;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+.function-title {
+    border-bottom: solid 2px rgb(204, 163, 49); 
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    color:  rgb(204, 163, 49);
+    margin-bottom: 20px;
+}
+.current-function {
+    filter: blur(0);
+    height: 300px;
+    visibility: visible;
+}
+
+.name {
+    position: absolute;
+    bottom: 0px;
+    width: 949px;
+    height: 0px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.p3:hover .name{
+    visibility: visible;
+    opacity: 0.6;
+    height: 160px;
+}
+h1{
+    color:  rgb(204, 163, 49);
+    text-align: center;
+    font-weight: 500;
+    margin: 0px 0 10px 0;
+    border-bottom: solid 1px rgb(248, 202, 76); 
+}
+.ftime,
+.ltime{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.ltime {
+    margin-top: 10px;
+}
+.enter{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}

@@ -1,0 +1,63 @@
+.list {
+    position: relative;
+    width: 1100px;
+    height: 500px;
+    background-color: #fff  transparent;
+    left: 50%;
+    margin-left: -550px;
+    margin-top: 15px;
+}
+.all-score,
+.user-score{
+    position: absolute;
+    width:567px ;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+} 
+.user-score{
+    left: -33px;
+}
+.all-score {
+    right: -33px;
+
+}
+h2{
+    border-bottom: 1px black solid;
+}
+.score{
+    float: left;
+    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+  
+}
+
+.download {
+    float: right;
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.play{
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+    padding-left: 10px;
+    border-left: 1px solid gray;
+}
+.delete{
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.player {
+    text-align: center;
+}

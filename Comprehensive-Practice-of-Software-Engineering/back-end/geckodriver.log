@@ -1,0 +1,127 @@
+1591231702453	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\UNCLED~1\\AppData\\Local\\Temp\\rust_mozprofilecYekL6"
+1591231760906	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\UNCLED~1\\AppData\\Local\\Temp\\rust_mozprofileJYNoDS"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591231764581	Marionette	INFO	Listening on port 56609
+1591231765050	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 203: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/plugin/all.mini.js?v=v1.0, line 19: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/plugin/all.mini.js?v=v1.0, line 19: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/plugin/all.mini.js?v=v1.0, line 19: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+1591231896227	Marionette	INFO	Stopped listening on port 56609
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1591231900751	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\UNCLED~1\\AppData\\Local\\Temp\\rust_mozprofile3zmZVr"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591231904486	Marionette	INFO	Listening on port 56802
+1591231904892	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/plugin/all.mini.js?v=v1.0, line 19: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/plugin/all.mini.js?v=v1.0, line 19: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/js/common/actions.js?v=v1.0, line 51: unreachable code after return statement
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript warning: http://xyfw.cug.edu.cn/tp_up/resource/plugin/all.mini.js?v=v1.0, line 19: unreachable code after return statement
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+console.warn: "Inspector destroyed while executing onReflow callback"
+1591232291139	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+send@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:26577
+ajax@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:22180
+jQuery.wrapAjax@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.plugins.contact-min.js?ver=20170713:18:4233
+n._evalUrl@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:23291
+Ha@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:21244
+append@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:22791
+html/<@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:24070
+Y@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:4515
+html@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:23660
+n.fn.load/<@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:29532
+i@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:1:27449
+fireWith@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:1:28213
+y@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:22721
+c@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:26925
+1591232304653	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1591232321617	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+send@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:26577
+ajax@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:22180
+jQuery.wrapAjax@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.plugins.contact-min.js?ver=20170713:18:4233
+n._evalUrl@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:23291
+Ha@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:21244
+append@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:22791
+html/<@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:24070
+Y@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:4515
+html@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:23660
+n.fn.load/<@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:29532
+i@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:1:27449
+fireWith@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:1:28213
+y@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:22721
+c@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:26925
+1591232329676	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1591232358571	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+send@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:26577
+ajax@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:22180
+jQuery.wrapAjax@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.plugins.contact-min.js?ver=20170713:18:4233
+n._evalUrl@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:23291
+Ha@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:21244
+append@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:22791
+html/<@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:24070
+Y@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:4515
+html@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:2:23660
+n.fn.load/<@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:29532
+i@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:1:27449
+fireWith@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:1:28213
+y@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:22721
+c@http://202.114.207.126/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?ver=20170713:3:26925
+1591232367176	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1591232404883	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1591232413340	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1591232430406	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1591232600740	Marionette	INFO	Stopped listening on port 56802
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

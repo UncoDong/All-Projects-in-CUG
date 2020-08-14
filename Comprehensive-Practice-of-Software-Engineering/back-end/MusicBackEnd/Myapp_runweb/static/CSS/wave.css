@@ -1,0 +1,92 @@
+pre {
+    white-space: pre-wrap;
+}
+
+
+
+
+.main {
+    width: 900px;
+    margin: 15px auto;
+    background-color: rgba(255,255,255,.5);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #aaa;
+}
+
+.mainBox {
+    position: relative;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.7);
+    --border: 1px solid #f60; 
+    
+}
+
+
+
+.btns button {
+    display: inline-block;
+    /* position: absolute; */
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background: rgba(135, 207, 235, 0.705);
+    color: rgb(0, 0, 0);
+    padding: 0 15px;
+    margin: 3px 20px 3px 0;
+    line-height: 36px;
+    height: 36px;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.btns button:active {
+    background: rgb(65, 136, 216);
+}
+
+.pd {
+    padding: 0 0 6px 0;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.lb {
+    display: inline-block;
+    vertical-align: middle;
+    background: #008a94;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 99px;
+}
+.re{
+    height:40px;
+    width:600px;
+    background:rgba(255, 255, 255, 0.808);
+    position:relative;
+    border-radius: 20px;
+}
+.recpowerx{
+    height:40px;
+    background:rgba(135, 207, 235, 0.575);
+    position:absolute;
+    border-radius: 20px;
+}
+.recpowert{
+    padding-left:250px; 
+    line-height:40px; 
+    position: relative;
+    border-radius: 20px;
+}
+.waveBox{
+    border:1px solid #ccc;
+}
+.recwave {
+    height:300px;
+    width:600px;
+}

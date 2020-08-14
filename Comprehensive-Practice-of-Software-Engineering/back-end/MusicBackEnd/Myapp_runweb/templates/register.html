@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="/static/CSS/base-style.css">
+    <link rel="stylesheet" href="/static/CSS/login.css">
+</head>
+
+<body>
+    <form action="/Myapp_login/register/" method="post" class="login-form rg" >
+        <div class="tit">
+            <p>注册新用户</p>
+        </div>
+        <div class="login-body">
+            <div class="us">
+                <label class="lll" for="user" style="user-select: none;">用户名</label>
+                <input type="text" name="user" id="user" title="请输入用户名" class="user" required="required">
+            </div>
+            <div class="ps">
+                <label class="lll" for="password" style="user-select: none;">密码</label>
+                <input type="password" name="password" title="请输入密码" class="password" id="password" required="required">
+            </div>
+            <div class="cps">
+                <label class="lll" for="cpassword" style="user-select: none;">确认密码</label>
+                <input type="password" name="cpassword" title="请再次输入密码" class="cpassword" id="cpassword"
+                    required="required">
+            </div>
+            <h1>{{wrong}}</h1>
+            <span for="btn" class="btnlab" onclick="register()">注册</span>
+            <input type="submit" value="注册" class="btn" id='btn'>           <a href="/Myapp_runweb/login">
+                <div class="register">注册完成？返回登录</div>
+            </a>
+        <script>
+                function register() {
+                    var username = document.getElementById('user').value;
+                    var password = document.getElementById('password').value;
+                    var cpassword = document.getElementById('cpassword').value;
+                    //用户名正则，4到16位（字母，数字，下划线，减号）
+                    var uPattern = /^[a-zA-Z0-9_-]{4,16}$/;
+                    //密码强度正则，6到18位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+                    var pPattern = /^.*(?=.{6,18})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+
+                    if (!uPattern.test(username)) {
+                        alert("用户名不合规范，应4到16位，可包含字母，数字，下划线，减号")
+                    }
+                    if (!pPattern.test(password)) {
+                        alert("密码强度不够或格式错误，应6到18位，至少包含1个大写字母，1个小写字母，1个数字，1个特殊字符")
+                    }
+                    if (password != cpassword) {
+                        aler("两次输入的密码不一致！")
+                    }
+                    if (uPattern.test(username) && pPattern.test(password) && password == cpassword) {
+                        document.getElementById('btn').click();
+                    }
+                }
+            </script>
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>

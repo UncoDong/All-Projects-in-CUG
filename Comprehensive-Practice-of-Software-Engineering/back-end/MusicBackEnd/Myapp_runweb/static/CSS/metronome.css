@@ -1,0 +1,132 @@
+.container {
+    position: relative;
+    background-color: rgba(255,255,255,0.5);
+    width: 900px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 500px;
+    box-shadow: 2px 2px 3px #aaa;
+}
+
+#speed {
+    font-size: 130px;
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    left: 50%;
+    top: 50%;
+    margin-left: -125px;
+    margin-top: -75px;
+    user-select: none;
+    
+}
+.btn {
+    position: absolute;
+    background-color: rgba(255,255,255,0.7);
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px skyblue solid;
+    user-select: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.speedcontrol {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(194, 232, 247, 0.507);
+    margin: 30px auto;
+    border-radius: 200px;
+
+
+}
+#btnSub,
+#btnAdd {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    border-radius: 24px;
+    top:50%;
+    margin-top: -12px;
+
+}
+#btnSub {
+    left: -12px;
+}
+#btnAdd{
+    right: -12px;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 300px;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    height: 15px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff; 
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+#rangeValue {
+
+    width: 100%;
+}
+#speed::after{
+    position: absolute;
+    content: 'bpm';
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    bottom: 0;
+    right: -30;
+}
+#btnTest{
+    position: absolute;
+    width: 30px;
+    height: 139px;
+    right: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    border-right: none;
+    top: 10%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+#btnPlay{
+    position: absolute;
+    width: 30px;
+    height: 55px;
+    right: 0;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    border-right: none;
+    bottom: 15%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}

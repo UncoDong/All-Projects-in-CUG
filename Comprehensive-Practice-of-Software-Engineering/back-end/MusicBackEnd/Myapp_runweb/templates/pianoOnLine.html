@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>HTML5网页钢琴</title>
+    <link rel="stylesheet" href="/static/CSS/base-style.css">
+    <link rel="stylesheet" href="/static/CSS/piano.css">
+    <link rel="stylesheet" href="/static/CSS/str-editor.css">
+    <link rel="stylesheet" href="/static/CSS/scorelist.css">
+    <script src="/static/JavaScript/jquery.min.js"></script>
+    <!-- <script src="/static/JavaScript/midi.js"></script> -->
+
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="/Myapp_runweb/home"><span class="home-label">听音撰谱主页</span></a>
+        <div class="lable-contaner clearfix">
+            <a href="/Myapp_runweb/metronome">
+                <li class="label lab1 ">网页节拍器</li>
+            </a>
+            <a href="/Myapp_runweb/wavescope">
+                <li class="label lab2">在线音波图展示</li>
+            </a>
+            <a href="/Myapp_runweb/str2musicscore">
+                <li class="label lab3">字符串生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/file2musicscore">
+                <li class="label lab4">音频文件生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/pianoOnLine">
+                <li class="label lab5 current-lable">HTML5网页钢琴</li>
+            </a>
+        </div>
+        <a href="{{ login_or_logout }}">
+            {% if user_name %}
+            <span style="float: right;" class="state"onclick="return func()">登出</span>
+            {% else %}
+            <span style="float: right;" class="state">登录</span>
+            {% endif %}
+        </a>
+        <a href="/Myapp_runweb/pianoOnLine" style="float: right;" class="username">
+            {% if user_name %}
+            <span>{{user_name}}</span>
+            {% else %}
+            <span>游客</span>
+            {% endif %}
+        </a>
+        <script>
+            function func() {
+                if (!confirm('是否确认登出')) {
+                    return false;
+                }
+            }
+        </script>
+    </header>
+    <div class="piano-window">
+        <div class="piano-window">
+            <div class="piano-wrap piano responsive-section-a visible">
+                <div class="piano-panel">
+                    <div class="piano-tip left-tip"><span class="playing-tip" style="display:none;"><span
+                                style="cursor: pointer;"></span>&nbsp;
+                            <img src="data:image/gif;base64,R0lGODlhCQAJAIABAP+ZM////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJMgABACwAAAAACQAJAAACEYwDlwa72A5sb0ZLJbv6VqQUACH5BAUyAAEALAAAAAAJAAkAAAIQjAOnkIq8GDxymtpijo6qAgA7"
+                                style="cursor: pointer; "></span>
+                        &nbsp;
+                    </div> <img src="/static/img/523109a.png" alt="" class="piano-band-img">
+                    <div class="piano-tip right-tip">⇧ 代表 shift 键</div>
+                </div>
+                <div class="piano-key-wrap" style="height: 244.611px;">
+                    <div id="49" data-name="C2" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">1</div>
+                            <div class="notename" style="display: none;">C2</div>
+                            <div class="singname" style="display: none;">do</div>
+                        </div>
+                    </div>
+                    <div id="50" data-name="D2" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">2</div>
+                            <div class="notename" style="display: none;">D2</div>
+                            <div class="singname" style="display: none;">re</div>
+                        </div>
+                    </div>
+                    <div id="51" data-name="E2" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">3</div>
+                            <div class="notename" style="display: none;">E2</div>
+                            <div class="singname" style="display: none;">mi</div>
+                        </div>
+                    </div>
+                    <div id="52" data-name="F2" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">4</div>
+                            <div class="notename" style="display: none;">F2</div>
+                            <div class="singname" style="display: none;">fa</div>
+                        </div>
+                    </div>
+                    <div id="53" data-name="G2" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">5</div>
+                            <div class="notename" style="display: none;">G2</div>
+                            <div class="singname" style="display: none;">so</div>
+                        </div>
+                    </div>
+                    <div id="54" data-name="A2" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">6</div>
+                            <div class="notename" style="display: none;">A2</div>
+                            <div class="singname" style="display: none;">la</div>
+                        </div>
+                    </div>
+                    <div id="55" data-name="B2" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">7</div>
+                            <div class="notename" style="display: none;">B2</div>
+                            <div class="singname" style="display: none;">si</div>
+                        </div>
+                    </div>
+                    <div id="56" data-name="C3" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">8</div>
+                            <div class="notename" style="display: none;">C3</div>
+                            <div class="singname" style="display: none;">do</div>
+                        </div>
+                    </div>
+                    <div id="57" data-name="D3" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">9</div>
+                            <div class="notename" style="display: none;">D3</div>
+                            <div class="singname" style="display: none;">re</div>
+                        </div>
+                    </div>
+                    <div id="48" data-name="E3" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">0</div>
+                            <div class="notename" style="display: none;">E3</div>
+                            <div class="singname" style="display: none;">mi</div>
+                        </div>
+                    </div>
+                    <div id="81" data-name="F3" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">q</div>
+                            <div class="notename" style="display: none;">F3</div>
+                            <div class="singname" style="display: none;">fa</div>
+                        </div>
+                    </div>
+                    <div id="87" data-name="G3" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">w</div>
+                            <div class="notename" style="display: none;">G3</div>
+                            <div class="singname" style="display: none;">so</div>
+                        </div>
+                    </div>
+                    <div id="69" data-name="A3" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">e</div>
+                            <div class="notename" style="display: none;">A3</div>
+                            <div class="singname" style="display: none;">la</div>
+                        </div>
+                    </div>
+                    <div id="82" data-name="B3" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">r</div>
+                            <div class="notename" style="display: none;">B3</div>
+                            <div class="singname" style="display: none;">si</div>
+                        </div>
+                    </div>
+                    <div id="84" data-name="C4" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">t</div>
+                            <div class="notename" style="display: none;">C4</div>
+                            <div class="singname" style="display: none;">do</div>
+                        </div>
+                    </div>
+                    <div id="89" data-name="D4" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">y</div>
+                            <div class="notename" style="display: none;">D4</div>
+                            <div class="singname" style="display: none;">re</div>
+                        </div>
+                    </div>
+                    <div id="85" data-name="E4" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">u</div>
+                            <div class="notename" style="display: none;">E4</div>
+                            <div class="singname" style="display: none;">mi</div>
+                        </div>
+                    </div>
+                    <div id="73" data-name="F4" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">i</div>
+                            <div class="notename" style="display: none;">F4</div>
+                            <div class="singname" style="display: none;">fa</div>
+                        </div>
+                    </div>
+                    <div id="79" data-name="G4" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">o</div>
+                            <div class="notename" style="display: none;">G4</div>
+                            <div class="singname" style="display: none;">so</div>
+                        </div>
+                    </div>
+                    <div id="80" data-name="A4" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">p</div>
+                            <div class="notename" style="display: none;">A4</div>
+                            <div class="singname" style="display: none;">la</div>
+                        </div>
+                    </div>
+                    <div id="65" data-name="B4" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">a</div>
+                            <div class="notename" style="display: none;">B4</div>
+                            <div class="singname" style="display: none;">si</div>
+                        </div>
+                    </div>
+                    <div id="83" data-name="C5" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">s</div>
+                            <div class="notename" style="display: none;">C5</div>
+                            <div class="singname" style="display: none;">do</div>
+                        </div>
+                    </div>
+                    <div id="68" data-name="D5" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">d</div>
+                            <div class="notename" style="display: none;">D5</div>
+                            <div class="singname" style="display: none;">re</div>
+                        </div>
+                    </div>
+                    <div id="70" data-name="E5" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">f</div>
+                            <div class="notename" style="display: none;">E5</div>
+                            <div class="singname" style="display: none;">mi</div>
+                        </div>
+                    </div>
+                    <div id="71" data-name="F5" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">g</div>
+                            <div class="notename" style="display: none;">F5</div>
+                            <div class="singname" style="display: none;">fa</div>
+                        </div>
+                    </div>
+                    <div id="72" data-name="G5" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">h</div>
+                            <div class="notename" style="display: none;">G5</div>
+                            <div class="singname" style="display: none;">so</div>
+                        </div>
+                    </div>
+                    <div id="74" data-name="A5" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">j</div>
+                            <div class="notename" style="display: none;">A5</div>
+                            <div class="singname" style="display: none;">la</div>
+                        </div>
+                    </div>
+                    <div id="75" data-name="B5" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">k</div>
+                            <div class="notename" style="display: none;">B5</div>
+                            <div class="singname" style="display: none;">si</div>
+                        </div>
+                    </div>
+                    <div id="76" data-name="C6" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">l</div>
+                            <div class="notename" style="display: none;">C6</div>
+                            <div class="singname" style="display: none;">do</div>
+                        </div>
+                    </div>
+                    <div id="90" data-name="D6" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">z</div>
+                            <div class="notename" style="display: none;">D6</div>
+                            <div class="singname" style="display: none;">re</div>
+                        </div>
+                    </div>
+                    <div id="88" data-name="E6" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">x</div>
+                            <div class="notename" style="display: none;">E6</div>
+                            <div class="singname" style="display: none;">mi</div>
+                        </div>
+                    </div>
+                    <div id="67" data-name="F6" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">c</div>
+                            <div class="notename" style="display: none;">F6</div>
+                            <div class="singname" style="display: none;">fa</div>
+                        </div>
+                    </div>
+                    <div id="86" data-name="G6" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">v</div>
+                            <div class="notename" style="display: none;">G6</div>
+                            <div class="singname" style="display: none;">so</div>
+                        </div>
+                    </div>
+                    <div id="66" data-name="A6" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">b</div>
+                            <div class="notename" style="display: none;">A6</div>
+                            <div class="singname" style="display: none;">la</div>
+                        </div>
+                    </div>
+                    <div id="78" data-name="B6" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">n</div>
+                            <div class="notename" style="display: none;">B6</div>
+                            <div class="singname" style="display: none;">si</div>
+                        </div>
+                    </div>
+                    <div id="77" data-name="C7" class="piano-key wkey key-hover">
+                        <div class="keytip">
+                            <div class="keyname" style="display: block;">m</div>
+                            <div class="notename" style="display: none;">C7</div>
+                            <div class="singname" style="display: none;">do</div>
+                        </div>
+                    </div>
+                    <div class="bkey-wrap bkey-wrap1">
+                        <div id="b49" data-name="C#2" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>1</div>
+                            </div>
+                        </div>
+                        <div id="b50" data-name="D#2" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>2</div>
+                            </div>
+                        </div>
+                        <div id="b52" data-name="F#2" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>4</div>
+                            </div>
+                        </div>
+                        <div id="b53" data-name="G#2" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>5</div>
+                            </div>
+                        </div>
+                        <div id="b54" data-name="A#2" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bkey-wrap bkey-wrap2">
+                        <div id="b56" data-name="C#3" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>8</div>
+                            </div>
+                        </div>
+                        <div id="b57" data-name="D#3" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>9</div>
+                            </div>
+                        </div>
+                        <div id="b81" data-name="F#3" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>Q</div>
+                            </div>
+                        </div>
+                        <div id="b87" data-name="G#3" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>W</div>
+                            </div>
+                        </div>
+                        <div id="b69" data-name="A#3" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>E</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bkey-wrap bkey-wrap3">
+                        <div id="b84" data-name="C#4" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>T</div>
+                            </div>
+                        </div>
+                        <div id="b89" data-name="D#4" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>Y</div>
+                            </div>
+                        </div>
+                        <div id="b73" data-name="F#4" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>I</div>
+                            </div>
+                        </div>
+                        <div id="b79" data-name="G#4" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>O</div>
+                            </div>
+                        </div>
+                        <div id="b80" data-name="A#4" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>P</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bkey-wrap bkey-wrap4">
+                        <div id="b83" data-name="C#5" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>S</div>
+                            </div>
+                        </div>
+                        <div id="b68" data-name="D#5" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>D</div>
+                            </div>
+                        </div>
+                        <div id="b71" data-name="F#5" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>G</div>
+                            </div>
+                        </div>
+                        <div id="b72" data-name="G#5" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>H</div>
+                            </div>
+                        </div>
+                        <div id="b74" data-name="A#5" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>J</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bkey-wrap bkey-wrap5">
+                        <div id="b76" data-name="C#6" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>L</div>
+                            </div>
+                        </div>
+                        <div id="b90" data-name="D#6" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>Z</div>
+                            </div>
+                        </div>
+                        <div id="b67" data-name="F#6" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>C</div>
+                            </div>
+                        </div>
+                        <div id="b86" data-name="G#6" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>V</div>
+                            </div>
+                        </div>
+                        <div id="b66" data-name="A#6" class="piano-key bkey key-hover" style="height: 158.997px;">
+                            <div class="keytip">
+                                <div class="keyname" style="display: block;">⇧<br>+<br>B</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="player">
+        <audio src="#" controls id='music'></audio>
+    </div>
+    <div class="list">
+        <div class="user-score" id="user" >
+            <h2>个人曲谱</h2>
+<!--            <form class="score" method="POST" action="/Myapp_covert2musicscore/showfromuser/" name="score-json" id="score-json-0"><span class="score_name">测试曲谱</span><span class="download" onclick="toPreview(event)">下载</span><span class="play" url="/Myapp_dealfile/downloadfile/2020_06_12_09_46_25.wav" onclick="play('/Myapp_dealfile/downloadfile/2020_06_12_09_46_25.wav')">播放</span><input type="text" name="lala" ><input type="submit" class="submit" ></form>-->
+        </div>
+        <div class="all-score" id="all">
+            <h2>所有曲谱</h2>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        function cbUser(result) {
+            console.log(result.musicscore.length)
+            var userContainer = document.getElementById("user");
+            for (let i = 0; i < result.musicscore.length; i++) {
+                var score = document.createElement("div")
+                score.className = "score";
+
+                var scoreName = document.createElement("span");
+                scoreName.innerHTML = result.musicscore[i].score_name + " 作者:" + result.musicscore[i].user_name;
+                scoreName.className = "score_name";
+
+                var deletebtn = document.createElement('span');
+                deletebtn.innerHTML = "删除";
+                deletebtn.className = "delete";
+                deletebtn.setAttribute('onclick', "toDelete(event)");
+
+                var download = document.createElement("span");
+                download.innerHTML = "下载";
+                download.className = "download";
+                download.setAttribute('onclick', "toPreview(event)");
+
+                var play = document.createElement("span");
+                play.innerHTML = "播放";
+                play.className = "play";
+                play.setAttribute('url', result.musicscore[i].wav_url)
+                play.setAttribute('onclick', "play('" + result.musicscore[i].wav_url + "')");
+
+
+
+                var downloadform = document.createElement("form");
+                downloadform.setAttribute('method', 'post');
+                downloadform.setAttribute('action', '/Myapp_covert2musicscore/showfromuser/')
+                downloadform.setAttribute('class', 'downloadform');
+
+                var text = document.createElement('input');
+                text.value = JSON.stringify(result.musicscore[i]);
+                text.setAttribute("type", "text");
+                text.style.visibility = 'hidden';
+                text.setAttribute('name', 'score_json_download')
+
+                var submit = document.createElement("input");
+                submit.setAttribute("type", "submit");
+                submit.style.visibility = "hidden";
+                submit.setAttribute('class', 'submit');
+
+
+
+                var deleteform = document.createElement("form");
+                deleteform.setAttribute('method', 'post');
+                deleteform.setAttribute('action', '/Myapp_runweb/delscore/')
+                deleteform.setAttribute('class', 'deleteform');
+
+                var text1 = document.createElement('input');
+                text1.value = JSON.stringify(result.musicscore[i]);
+                text1.setAttribute("type", "text");
+                text1.style.visibility = 'hidden';
+                text1.setAttribute('name', 'score_json_delete')
+
+                var submit1 = document.createElement("input");
+                submit1.setAttribute("type", "submit");
+                submit1.style.visibility = "hidden";
+                submit1.setAttribute('class', 'submit');
+
+
+                downloadform.appendChild(text);
+                downloadform.appendChild(submit);
+
+                deleteform.appendChild(text1);
+                deleteform.appendChild(submit1);
+
+                score.appendChild(scoreName);
+                score.appendChild(download);
+                score.appendChild(play);
+                score.appendChild(deletebtn)
+                score.appendChild(downloadform)
+                score.appendChild(deleteform)
+
+
+                userContainer.appendChild(score);
+
+
+            }
+
+        }
+
+        function cbAll(result) {
+            console.log(result.musicscore.length)
+            var allContainer = document.getElementById("all");
+            for (let i = 0; i < result.musicscore.length; i++) {
+                var score = document.createElement("div")
+                score.className = "score";
+
+                var scoreName = document.createElement("span");
+                scoreName.innerHTML = result.musicscore[i].score_name + " 作者:" + result.musicscore[i].user_name;
+                scoreName.className = "score_name";
+
+<!--                var deletebtn = document.createElement('span');-->
+<!--                deletebtn.innerHTML = "删除";-->
+<!--                deletebtn.className = "delete";-->
+<!--                deletebtn.setAttribute('onclick', "toDelete(event)");-->
+
+                var download = document.createElement("span");
+                download.innerHTML = "下载";
+                download.className = "download";
+                download.setAttribute('onclick', "toPreview(event)");
+
+                var play = document.createElement("span");
+                play.innerHTML = "播放";
+                play.className = "play";
+                play.setAttribute('url', result.musicscore[i].wav_url)
+                play.setAttribute('onclick', "play('" + result.musicscore[i].wav_url + "')");
+
+
+
+                var downloadform = document.createElement("form");
+                downloadform.setAttribute('method', 'post');
+                downloadform.setAttribute('action', '/Myapp_covert2musicscore/showfromuser/')
+                downloadform.setAttribute('class', 'downloadform');
+
+                var text = document.createElement('input');
+                text.value = JSON.stringify(result.musicscore[i]);
+                text.setAttribute("type", "text");
+                text.style.visibility = 'hidden';
+                text.setAttribute('name', 'score_json_download')
+
+                var submit = document.createElement("input");
+                submit.setAttribute("type", "submit");
+                submit.style.visibility = "hidden";
+                submit.setAttribute('class', 'submit');
+
+                downloadform.appendChild(text);
+                downloadform.appendChild(submit);
+
+                score.appendChild(scoreName);
+                score.appendChild(download);
+                score.appendChild(play);
+<!--                score.appendChild(deletebtn)-->
+                score.appendChild(downloadform)
+
+
+                allContainer.appendChild(score);
+            }
+        }
+
+
+         function toPreview(e) {
+            e.path[1].getElementsByClassName("downloadform")[0].getElementsByClassName('submit')[0].click();
+        }
+       function toDelete(e) {
+            if (confirm("确定删除？")) {
+                e.path[1].getElementsByClassName("deleteform")[0].getElementsByClassName('submit')[0].click();
+            }
+            else {
+
+            }
+        }
+
+
+        function play(url) {
+            console.log(url)
+            audio = document.getElementById('music');
+            audio.setAttribute('src', url);
+            audio.play();
+        }
+
+
+    </script>
+
+
+
+</body>
+<script type="text/javascript" src="/static/JavaScript/html5piano.js"></script>
+<script src="/static/JavaScript/listjson.js"></script>
+<script type="text/javascript" src="/static/json/user.json?callback=cbUser"></script>
+<script type="text/javascript" src="/static/json/all.json?callback=cbAll"></script>
+
+</html>

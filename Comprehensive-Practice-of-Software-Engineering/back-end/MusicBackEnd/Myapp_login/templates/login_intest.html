@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title1}}</title>
+</head>
+<body>
+    <form action="/Myapp_login/login/" method="post">
+        <input type="text" name="user">
+        <input type="password" name="password">
+        <input type="submit" value="登录">
+    </form>
+    {% if wrong %}
+        <h1>{{wrong}}</h1>
+    {% endif %}
+</body>
+</html>

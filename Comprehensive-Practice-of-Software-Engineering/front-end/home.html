@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听音撰谱功能实现主页</title>
+    <link rel="stylesheet" href="/static/CSS/base-style.css">
+    <link rel="stylesheet" href="/static/CSS/homepage.css">
+    <!-- <script src="/static/JavaScript/home.js"></script> -->
+</head>
+
+<body>
+    <header id="header" style="z-index: 10;">
+        <a href="/Myapp_runweb/home"><span class="home-label current-lable">听音撰谱主页</span></a>
+        <div class="lable-contaner clearfix">
+            <a href="/Myapp_runweb/metronome">
+                <li class="label lab1 ">网页节拍器</li>
+            </a>
+            <a href="/Myapp_runweb/wavescope">
+                <li class="label lab2">在线音波图展示</li>
+            </a>
+            <a href="/Myapp_runweb/str2musicscore">
+                <li class="label lab3">字符串生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/file2musicscore">
+                <li class="label lab4">音频文件生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/pianoOnLine">
+                <li class="label lab5">HTML5网页钢琴</li>
+            </a>
+        </div>
+
+        <!--         <h1>{{ login_or_logout }}</h1>-->
+        <!--        <h1>{{ user_name }}</h1>-->
+
+        <a href="{{ login_or_logout }}">
+            {% if user_name %}
+            <span style="float: right;" class="state"onclick="return func()">登出</span>
+            {% else %}
+            <span style="float: right;" class="state">登录</span>
+            {% endif %}
+        </a>
+        <a href="/Myapp_runweb/pianoOnLine" style="float: right;" class="username">
+            {% if user_name %}
+            <span>{{user_name}}</span>
+            {% else %}
+            <span>游客</span>
+            {% endif %}
+        </a>
+<script>
+            function func() {
+                if (!confirm('是否确认登出')) {
+                    return false;
+                }
+            }
+        </script>
+
+    </header>
+
+    </header>
+    <div class="box">
+
+        <div class="list">
+            <ul>
+
+                <li class="p5 li"><a href="#"><img class="im" src="/static/img/预览3.png" alt="" />
+                        <div class="name">
+                            <h1>曲谱制作</h1>
+                            <p class="ftime">开发时间：2020-06-04</p>
+                            <p class="ltime">最后修改时间：2020-06-11</p>
+                            <span class="enter">点击进入</span>
+                        </div>
+                    </a></li>
+                <li class="p4 li"><a href="#"><img class="im" src="/static/img/预览2.png" alt="" />
+                        <div class="name">
+                            <h1>在线音波图</h1>
+                            <p class="ftime">开发时间：2020-06-02</p>
+                            <p class="ltime">最后修改时间：2020-06-06</p>
+                            <span class="enter">点击进入</span>
+                        </div>
+                    </a></li>
+                <li class="p3 li"><a href="/Myapp_runweb/metronome"><img class="im" src="/static/img/预览1.png" alt="" />
+                        <div class="name">
+                            <h1>节拍器</h1>
+                            <p class="ftime">开发时间：2020-06-01</p>
+                            <p class="ltime">最后修改时间：2020-06-06</p>
+                            <span class="enter">点击进入</span>
+                        </div>
+                    </a></li>
+                <li class="p2 li"><a href="#"><img class="im" src="/static/img/预览4.png" alt="" />
+                        <div class="name">
+                            <h1>网页钢琴</h1>
+                            <p class="ftime">开发时间：2020-06-04</p>
+                            <p class="ltime">最后修改时间：2020-06-11</p>
+                            <span class="enter">点击进入</span>
+                        </div>
+                    </a></li>
+                <li class="p1 li"><a href="#"><img class="im" src="/static/img/预览5.png" alt="" />
+                        <div class="name">
+                            <h1>文件转换</h1>
+                            <p class="ftime">开发时间：2020-06-03</p>
+                            <p class="ltime">最后修改时间：2020-06-10</p>
+                            <span class="enter">点击进入</span>
+                        </div>
+                    </a></li>
+            </ul>
+        </div>
+
+        <a href="javascript:;" class="prev btn">&lt;</a>
+        <a href="javascript:;" class="next btn">&gt;</a>
+
+        <div class="buttons">
+            <a href="javascript:;"><span class="blue"></span></a>
+            <a href="javascript:;"><span></span></a>
+            <a href="javascript:;"><span></span></a>
+            <a href="javascript:;"><span></span></a>
+            <a href="javascript:;"><span></span></a>
+        </div>
+    </div>
+    <div class="f">
+        <div class="function fc1 current-function ">
+            <h2 class="function-title">节拍器</h2>
+            <p>电子节拍器：digital metronome</p>
+            <p>能在各种速度中发出一种稳定的节拍</p>
+            <p>可以作为一种节奏性乐器使用</p>
+            <br>
+            <p>使用HTML制作，使用Web自带的AudioContext产生节拍器声音</p>
+            <br>
+            <p>三种方式改变节拍器速度，操作简单便捷</p>
+        </div>
+        <div class="function fc2">
+            <h2 class="function-title">在线音波图</h2>
+            <p>音波为发声体在振动中产生的纵波</p>
+            <p>可在介质中传播</p>
+            <p>可以用波形图的形式表示音波的三要素</p>
+            <p>频率，相位，振幅</p>
+            <br>
+            <p>基于录音核心，mp3录音引擎制作</p>
+            <p>可将设备收到的声音以音波图形式展出</p>
+            <p>支持录音，复播</p>
+        </div>
+        <div class="function fc3">
+            <h2 class="function-title">曲谱制作</h2>
+            <p>可自由编辑曲谱</p>
+            <p>支持十六分音符，八分音符，四分音符，二分音符，全音符和附点音符</p>
+            <p>登录用户自动将当前编辑曲谱上传至个人曲谱库</p>
+            <br>
+            <p>操作简便</p>
+            <p>可用鼠标，键盘操作</p>
+            <p>语法自动生成，可视化编辑</p>
+        </div>
+        <div class="function fc4">
+            <h2 class="function-title">文件转换</h2>
+            <p>使用算法可以实现直接将声音文件转换为曲谱</p>
+            <p>暂支持WAV格式音频</p>
+            <br>
+            <p>有两种算法可供选择</p>
+            <p>基于短时傅里叶的数学方法</p>
+            <p>基于注意力机制的神经网络方法</p>
+        </div>
+        <div class="function fc5">
+            <h2 class="function-title">网页钢琴</h2>
+            <p>自由弹奏钢琴</p>
+            <p>所有音频文件以Base64格式存在piano.js中</p>
+            <br>
+            <p>用户登录后可查看个人上传的曲谱库</p>
+            <p>游客仅可查看当前数据库中的曲谱库</p>
+            <br>
+            <p>支持在线播放，预览和下载曲谱及音频文件</p>
+        </div>
+    </div>
+    <!-- <div id="container"><canvas class="sketch" id="sketch-0" height="150" width="1536" style="z-index: 100;"></canvas></div>
+    <script type="text/javascript" src="sketch.min.js"></script>
+    <script type="text/javascript" src="index.js"></script> -->
+
+
+
+
+    <script type="text/javascript" src="/static/JavaScript/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        var $a = $(".buttons a");
+        var $s = $(".buttons span");
+        var $f = $(".function")
+        var cArr = ["p5", "p4", "p3", "p2", "p1"];
+        var cFnc = ["fc5", "fc4", "fc3", "fc2", "fc1"];
+        var url = [
+            "/Myapp_runweb/metronome",
+            "/Myapp_runweb/wavescope",
+            "/Myapp_runweb/str2musicscore",
+            "/Myapp_runweb/file2musicscore",
+            "/Myapp_runweb/pianoOnLine"
+        ]
+        var index = 0;
+        $(".next").click(
+            function () {
+                nextimg();
+            }
+        )
+        $(".prev").click(
+            function () {
+                previmg();
+            }
+        )
+        //上一张
+        function previmg() {
+            cArr.unshift(cArr[4]);
+            cArr.pop();
+            $(".li").each(function (i, e) {
+                $(e).removeClass().addClass(cArr[i]).addClass('li');
+            })
+            $(".function").each(function (i, e) {
+                $(e).removeClass().addClass(cFnc[i]).addClass('function');
+            })
+            index--;
+            if (index < 0) {
+                index = 4;
+            }
+            show();
+        }
+
+        //下一张
+        function nextimg() {
+            cArr.push(cArr[0]);
+            cArr.shift();
+            $(".li").each(function (i, e) {
+                $(e).removeClass().addClass(cArr[i]).addClass('li');
+            })
+            $(".function").each(function (i, e) {
+                $(e).removeClass().addClass(cFnc[i]).addClass('function');
+            })
+            index++;
+            if (index > 4) {
+                index = 0;
+            }
+            show();
+        }
+
+        //通过底下按钮点击切换
+        $a.each(function () {
+            $(this).click(function () {
+                var myindex = $(this).index();
+                var b = myindex - index;
+                if (b == 0) {
+                    return;
+                }
+                else if (b > 0) {
+                    var newarr = cArr.splice(0, b);
+                    cArr = $.merge(cArr, newarr);
+                    console.log($(".li"));
+                    $(".li").each(function (i, e) {
+                        $(e).removeClass().addClass(cArr[i]).addClass('li');
+                    })
+                    $(".function").each(function (i, e) {
+                        $(e).removeClass().addClass(cFnc[i]).addClass('function');
+                    })
+                    index = myindex;
+                    show();
+                }
+                else if (b < 0) {
+                    cArr.reverse();
+                    var oldarr = cArr.splice(0, -b)
+                    cArr = $.merge(cArr, oldarr);
+                    cArr.reverse();
+                    $(".li").each(function (i, e) {
+                        $(e).removeClass().addClass(cArr[i]).addClass('li');
+                    })
+                    $(".function").each(function (i, e) {
+                        $(e).removeClass().addClass(cFnc[i]).addClass('function');
+                    })
+                    index = myindex;
+                    show();
+                }
+            })
+        })
+
+        //改变底下按钮的背景色
+        function show() {
+            console.log($(".p3"))
+            for (let i = 0; i < 5; i++) {
+                $(".p" + i).children("a").attr("href", "#");
+                if (i == 3) {
+                    $(".p" + i).children("a").attr("href", url[index]);
+                }
+            }
+
+            $($s).eq(index).addClass("blue").parent().siblings().children().removeClass("blue");
+            $($f).eq(index).addClass("current-function").parent().siblings().children().removeClass("current-function");
+
+        }
+
+        //点击class为p2的元素触发上一张照片的函数
+        $(document).on("click", ".p2", function () {
+            previmg();
+            return false;//返回一个false值，让a标签不跳转
+        });
+
+        //点击class为p4的元素触发下一张照片的函数
+        $(document).on("click", ".p4", function () {
+            nextimg();
+            return false;
+        });
+
+        //			鼠标移入box时清除定时器
+        $(".box").mouseover(function () {
+            clearInterval(timer);
+        })
+
+        //			鼠标移出box时开始定时器
+        $(".box").mouseleave(function () {
+            timer = setInterval(nextimg, 4000);
+        })
+
+        //			进入页面自动开始定时器
+        timer = setInterval(nextimg, 4000);
+    </script>
+
+
+
+    <a href="#header" title="回到顶部"><span class="return-top"></span></a>
+    <footer class="clearfix">
+        <h3 style="border-bottom: 1px solid gray; text-align: center;">关于我们</h3>
+        <dl class="tapd">
+            <dt>
+                <label>
+                    <img src="/static/img/logo-tapd.png" height="20px" alt="">
+                </label>
+                <span>TAPD项目</span>
+            </dt>
+            <dd>
+                <span>听音撰谱功能实现与系统开发</span>
+            </dd>
+
+        </dl>
+        <dl class="xiaopiu">
+            <dt>
+                <label>
+                    <img src="/static/img/logo-xiaopiu.png" height="20px" alt="">
+                </label>
+                <span>xiaopiu界面原型设计</span>
+            </dt>
+            <dd>
+                <a href="https://www.xiaopiu.com/web/byId?type=project&id=5edf418bebea406c203104d9">
+                    <span>前端界面原型设计</span>
+                </a>
+            </dd>
+
+        </dl>
+        <dl class="github">
+            <dt>
+                <label>
+                    <img src="/static/img/logo-git.png" height="20px" alt="">
+                </label>
+                <span>GitHub源码</span>
+            </dt>
+            <dd><a href="https://github.com/UncoDong/back-end">
+                    <span>后端代码</span>
+                </a>
+            </dd>
+            <dd><a href="https://github.com/UncoDong/TAPD-test">
+                    <span>测试代码</span>
+                </a>
+            </dd>
+            <dd><a href="https://github.com/UncoDong/Music-Attention-pytorch-onlycode">
+                    <span>算法代码</span>
+                </a>
+            </dd>
+            <dd><a href="https://github.com/Asa-kura/note">
+                    <span>前端代码</span>
+                </a>
+            </dd>
+            <dd><a href="https://github.com/Asa-kura/Vuedemo">
+                    <span>Vue框架demo代码</span>
+                </a>
+            </dd>
+            <dd><a href="https://github.com/Asa-kura/admindemo">
+                    <span>iview-admin框架demo代码</span>
+                </a>
+            </dd>
+
+
+        </dl>
+
+        <dl class="csdn">
+            <dt>
+                <label>
+                    <img src="/static/img/logo-csdn.png" height="20px" alt="">
+                </label>
+                <span>CSDN博客</span>
+            </dt>
+            <dd>
+                <a href="https://blog.csdn.net/weixin_42763696/article/details/106332665">
+                    <span>Tapd GitHub集成 详细图片</span>
+                </a>
+            </dd>
+            <dd>
+                <a href="https://blog.csdn.net/weixin_42763696/article/details/106413263">
+                    <span>TAPD pytest自动化测试部署 (git or 本地)</span>
+                </a>
+            </dd>
+            <dd> <a href="https://blog.csdn.net/weixin_42763696/article/details/106412881">
+                    <span>TAPD关联Jenkins</span>
+                </a>
+            </dd>
+            <dd> <a href="https://blog.csdn.net/weixin_42763696/article/details/106081449">
+                    <span>阿里云服务器 CentOS7 Tomcat + Jenkins+国内镜像 配置</span>
+                </a>
+            </dd>
+                       <dd><a href="https://blog.csdn.net/ym912305103/article/details/106700143">
+                    <span>前端学习 HTML基础语法 标签 书写规范 构成</span>
+                </a>
+
+            </dd>
+            <dd><a href="https://blog.csdn.net/ym912305103/article/details/106700035">
+                    <span>前端学习笔记 CSS基础布局 样式 书写规范</span>
+                </a>
+            </dd>
+            <dd><a href="https://blog.csdn.net/ym912305103/article/details/106700300">
+                    <span>前端学习 HTML5和CSS3新特性 高级技巧 JavaScript基础语法</span>
+                </a>
+            </dd>
+        </dl>
+    </footer>
+
+</body>
+
+</html>

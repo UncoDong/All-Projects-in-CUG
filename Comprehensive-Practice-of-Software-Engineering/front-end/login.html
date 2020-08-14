@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title1}}</title>
+    <link rel="stylesheet" href="/static/CSS/base-style.css">
+    <link rel="stylesheet" href="/static/CSS/login.css">
+</head>
+
+<body>
+    <form action="/Myapp_login/login/" method="post" class="login-form">
+        <div class="tit">
+            <p>欢迎登录</p>
+        </div>
+        <div class="login-body">
+            <div class="us">
+                <label for="user" class="lll" style="user-select: none;">用户名</label>
+                <input type="text" name="user" id="user" title="请输入用户名" class="user" required="required">
+            </div>
+            <div class="ps">
+                <label for="password" class="lll" style="user-select: none;">密码</label>
+                <input type="password" name="password" title="请输入密码" class="password" id="password" required="required">
+            </div>
+            {% if wrong %}
+            <h1>{{wrong}}</h1>
+            {% endif %}
+            <label for="btn" class="btnlab">登录</label>
+            <input type="submit" value="登录" class="btn" id="btn">
+
+            <a href="/Myapp_runweb/register">
+                <div class="register">没有账号？点击注册</div>
+            </a>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>

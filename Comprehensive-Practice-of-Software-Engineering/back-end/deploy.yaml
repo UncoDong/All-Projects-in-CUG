@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  vars:
+    repo_folder: /workspace/final_back_end
+  tasks:
+    - name: "Create directory if not exists"
+      file:
+        path: "{{ repo_folder }}"
+        state: directory
+        mode: 0755
+        group: root
+        owner: root
+
+    - name: kill old process
+      shell: sudo kill -9 $(lsof -i:8000 -t)
+      ignore_errors: true
+
+    - name: clone repository
+      git:
+        repo: https://github.com/UncoDong/back-end.git
+        dest: "{{ repo_folder }}"
+        update: yes
+        force: yes
+
+    - name: start server
+      shell: "cd  {{ repo_folder }}/MusicBackEnd && nohup sudo python manage.py runserver 0.0.0.0:8001 > Music.log 2>&1 &"

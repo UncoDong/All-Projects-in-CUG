@@ -1,0 +1,114 @@
+.file-load-area {
+    position: relative;
+    background-color: rgba(255,255,255,0.5);
+    width: 900px;
+    height: 200px;
+    margin: 15px auto;
+    box-sizing: border-box;
+    /* padding: 50px; */
+    border-radius: 100px;
+    box-shadow: 2px 2px 3px #aaa;
+    text-align: center;
+    line-height: 200px;
+}
+.audio {
+    display: none;
+}
+.audio-after {
+    display: block;
+}
+#file {
+   visibility: hidden;
+    
+}
+#filebtn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: skyblue solid 1px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.submmit-button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: skyblue solid 1px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.lable{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: -70px;
+}
+#fname{
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    top: 50%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+
+.lab22,
+.lab11{
+    height: 30px;
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    background-color: rgba(255,255,255,0.7);
+    transition: all 0.5s;
+    cursor: pointer;
+    
+}
+.lab22:hover,
+.lab11:hover{
+    background-color: rgba(179, 179, 179, 0.7);
+    
+}
+.lab22{
+    bottom: 30px;
+}
+input{
+    float: left;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+label{
+    line-height: 30px;
+    font-size: 15px;
+    width: 477px;
+    height: 30px;
+    float: left;
+    text-align: left;
+    cursor: pointer;
+}

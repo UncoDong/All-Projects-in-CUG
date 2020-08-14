@@ -1,0 +1,16 @@
+{
+	"name": "tock",
+	"version": "1.0.12",
+	"main": "./tock.js",
+	"ignore": [
+		"**/.md",
+		"**/.html",
+		"**/.*",
+		"**/.json"
+	],
+	"keywords": [
+		"timer",
+		"clock",
+		"repetition"
+	]
+}

@@ -1,0 +1,254 @@
+{
+    "test0": {
+        "note_str": "1",
+        "note_ans": "C5"
+    },
+    "test1": {
+        "note_str": "2",
+        "note_ans": "D5"
+    },
+    "test2": {
+        "note_str": "3",
+        "note_ans": "E5"
+    },
+    "test3": {
+        "note_str": "4",
+        "note_ans": "F5"
+    },
+    "test4": {
+        "note_str": "5",
+        "note_ans": "G5"
+    },
+    "test5": {
+        "note_str": "6",
+        "note_ans": "A5"
+    },
+    "test6": {
+        "note_str": "7",
+        "note_ans": "B5"
+    },
+    "test7": {
+        "note_str": "1#",
+        "note_ans": "C5#"
+    },
+    "test8": {
+        "note_str": "2#",
+        "note_ans": "D5#"
+    },
+    "test9": {
+        "note_str": "3#",
+        "note_ans": "E5#"
+    },
+    "test10": {
+        "note_str": "4#",
+        "note_ans": "F5#"
+    },
+    "test11": {
+        "note_str": "5#",
+        "note_ans": "G5#"
+    },
+    "test12": {
+        "note_str": "6#",
+        "note_ans": "A5#"
+    },
+    "test13": {
+        "note_str": "7#",
+        "note_ans": "B5#"
+    },
+    "test14": {
+        "note_str": "1b",
+        "note_ans": "C5b"
+    },
+    "test15": {
+        "note_str": "2b",
+        "note_ans": "D5b"
+    },
+    "test16": {
+        "note_str": "3b",
+        "note_ans": "E5b"
+    },
+    "test17": {
+        "note_str": "4b",
+        "note_ans": "F5b"
+    },
+    "test18": {
+        "note_str": "5b",
+        "note_ans": "G5b"
+    },
+    "test19": {
+        "note_str": "6b",
+        "note_ans": "A5b"
+    },
+    "test20": {
+        "note_str": "7b",
+        "note_ans": "B5b"
+    },
+    "test21": {
+        "note_str": "[1]",
+        "note_ans": "C6"
+    },
+    "test22": {
+        "note_str": "[2]",
+        "note_ans": "D6"
+    },
+    "test23": {
+        "note_str": "[3]",
+        "note_ans": "E6"
+    },
+    "test24": {
+        "note_str": "[4]",
+        "note_ans": "F6"
+    },
+    "test25": {
+        "note_str": "[5]",
+        "note_ans": "G6"
+    },
+    "test26": {
+        "note_str": "[6]",
+        "note_ans": "A6"
+    },
+    "test27": {
+        "note_str": "[7]",
+        "note_ans": "B6"
+    },
+    "test28": {
+        "note_str": "(1)",
+        "note_ans": "C4"
+    },
+    "test29": {
+        "note_str": "(2)",
+        "note_ans": "D4"
+    },
+    "test30": {
+        "note_str": "(3)",
+        "note_ans": "E4"
+    },
+    "test31": {
+        "note_str": "(4)",
+        "note_ans": "F4"
+    },
+    "test32": {
+        "note_str": "(5)",
+        "note_ans": "G4"
+    },
+    "test33": {
+        "note_str": "(6)",
+        "note_ans": "A4"
+    },
+    "test34": {
+        "note_str": "(7)",
+        "note_ans": "B4"
+    },
+    "test35": {
+        "note_str": "[1#]",
+        "note_ans": "C6#"
+    },
+    "test36": {
+        "note_str": "[2#]",
+        "note_ans": "D6#"
+    },
+    "test37": {
+        "note_str": "[3#]",
+        "note_ans": "E6#"
+    },
+    "test38": {
+        "note_str": "[4#]",
+        "note_ans": "F6#"
+    },
+    "test39": {
+        "note_str": "[5#]",
+        "note_ans": "G6#"
+    },
+    "test40": {
+        "note_str": "[6#]",
+        "note_ans": "A6#"
+    },
+    "test41": {
+        "note_str": "[7#]",
+        "note_ans": "B6#"
+    },
+    "test42": {
+        "note_str": "[1b]",
+        "note_ans": "C6b"
+    },
+    "test43": {
+        "note_str": "[2b]",
+        "note_ans": "D6b"
+    },
+    "test44": {
+        "note_str": "[3b]",
+        "note_ans": "E6b"
+    },
+    "test45": {
+        "note_str": "[4b]",
+        "note_ans": "F6b"
+    },
+    "test46": {
+        "note_str": "[5b]",
+        "note_ans": "G6b"
+    },
+    "test47": {
+        "note_str": "[6b]",
+        "note_ans": "A6b"
+    },
+    "test48": {
+        "note_str": "[7b]",
+        "note_ans": "B6b"
+    },
+    "test49": {
+        "note_str": "(1#)",
+        "note_ans": "C4#"
+    },
+    "test50": {
+        "note_str": "(2#)",
+        "note_ans": "D4#"
+    },
+    "test51": {
+        "note_str": "(3#)",
+        "note_ans": "E4#"
+    },
+    "test52": {
+        "note_str": "(4#)",
+        "note_ans": "F4#"
+    },
+    "test53": {
+        "note_str": "(5#)",
+        "note_ans": "G4#"
+    },
+    "test54": {
+        "note_str": "(6#)",
+        "note_ans": "A4#"
+    },
+    "test55": {
+        "note_str": "(7#)",
+        "note_ans": "B4#"
+    },
+    "test56": {
+        "note_str": "(1b)",
+        "note_ans": "C4b"
+    },
+    "test57": {
+        "note_str": "(2b)",
+        "note_ans": "D4b"
+    },
+    "test58": {
+        "note_str": "(3b)",
+        "note_ans": "E4b"
+    },
+    "test59": {
+        "note_str": "(4b)",
+        "note_ans": "F4b"
+    },
+    "test60": {
+        "note_str": "(5b)",
+        "note_ans": "G4b"
+    },
+    "test61": {
+        "note_str": "(6b)",
+        "note_ans": "A4b"
+    },
+    "test62": {
+        "note_str": "(7b)",
+        "note_ans": "B4b"
+    }
+}

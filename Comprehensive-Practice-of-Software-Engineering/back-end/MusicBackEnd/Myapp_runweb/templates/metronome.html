@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页节拍器</title>
+    <link rel="stylesheet" href="/static/CSS/base-style.css">
+    <link rel="stylesheet" href="/static/CSS/metronome.css">
+    <script src="/static/JavaScript/metronome.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="/Myapp_runweb/home"><span class="home-label">听音撰谱主页</span></a>
+        <div class="lable-contaner clearfix">
+            <a href="/Myapp_runweb/metronome">
+                <li class="label lab1 current-lable">网页节拍器</li>
+            </a>
+            <a href="/Myapp_runweb/wavescope">
+                <li class="label lab2">在线音波图展示</li>
+            </a>
+            <a href="/Myapp_runweb/str2musicscore">
+                <li class="label lab3">字符串生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/file2musicscore">
+                <li class="label lab4">音频文件生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/pianoOnLine">
+                <li class="label lab5">HTML5网页钢琴</li>
+            </a>
+        </div>
+        <a href="{{ login_or_logout }}">
+            {% if user_name %}
+            <span style="float: right;" class="state"onclick="return func()">登出</span>
+            {% else %}
+            <span style="float: right;" class="state">登录</span>
+            {% endif %}
+        </a>
+        <a href="/Myapp_runweb/pianoOnLine" style="float: right;" class="username">
+            {% if user_name %}
+            <span>{{user_name}}</span>
+            {% else %}
+            <span>游客</span>
+            {% endif %}
+        </a>
+        <script>
+            function func() {
+                if (!confirm('是否确认登出')) {
+                    return false;
+                }
+            }
+        </script>
+    </header>
+    <section class="container">
+        <div class="speedcontrol">
+            <div>
+                <span id="btnSub" class="btn">-</span>
+                <div id="speed">60</div>
+                <span id="btnAdd" class="btn">+</span>
+            </div>
+
+        </div>
+        <div>
+            <input type="range" min="20" max="300" id="rangeValue" value="60">
+        </div>
+        <span id="btnTest" class="btn">连续点击测速</span>
+        <span id="btnPlay" class="btn">开始</span>
+    </section>
+
+</body>
+
+</html>

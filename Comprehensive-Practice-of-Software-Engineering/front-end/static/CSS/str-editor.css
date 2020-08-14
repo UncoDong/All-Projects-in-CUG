@@ -1,0 +1,237 @@
+* {
+    user-select: none;
+    transition: background-color 0.5s,width 0.5s;
+}
+.piano-window {
+    width: 1300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0)
+}
+
+body {
+    background-color: rgba(236, 231, 231, 0.911)
+}
+footer {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    margin: 20px auto 0;
+}
+.container{
+    width: 1170px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 15px auto;
+    box-sizing: boder-box;
+    padding: 10px;
+
+}
+.form-str {
+    position: relative;
+    width: 1170px;
+    height: 552px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 15px auto;
+    box-sizing: boder-box;
+    padding: 10px;
+}
+h3,
+h2{
+    border-bottom: 1px solid gray;
+}
+.scorename,
+.str-area {
+    position: absolute;
+    width: 1150px;
+    margin-top: 3px;
+    left: 10px;
+    height: 350px;
+    margin-right: 0;
+    resize: none;
+    border-radius: 10px;
+    box-sizing: boder-box;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.5);
+    cursor: default;
+    
+}
+.scorename {
+    font-size: 15px;
+    height: 20px;
+    line-height: 20px;
+    padding: 3px;
+    width: 1164px;
+    
+}
+.submmit-button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12%;
+    height: 37px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: skyblue solid 1px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 37px;
+    font-size: 20px;
+}
+.clean-button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: skyblue solid 1px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+}
+.ruler-window {
+    position: fixed;
+    left: 0;
+    top:20%;
+    border-radius: 0 10px 10px 0;
+    width: 300px;
+    height: 500px;
+    background-color: rgba(255,255,255,0.5);
+    transition: all 0.5s;
+    box-sizing: border-box;
+    padding:10px;
+    z-index: 2;
+}
+.ruler-windowhidden {
+    width: 10px;
+}
+.method-bts {
+    position: fixed;
+    top: 20%;
+    right: 100px;
+    
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+    width: 35px;
+    height: 197px;
+    text-align: center;
+
+}
+.method-bts span {
+    position: absolute;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px;
+    left: 5px;
+    background-color: #fff;
+    margin-top: -12px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 2;
+}
+.method-bts .bt1{
+    top: 10%;
+
+}
+.method-bts .bt2{
+    top: 30%;
+}
+.method-bts .bt3{
+    top: 50%;
+}
+.method-bts .bt4{
+    top: 70%;
+}
+.method-bts .bt5{
+    top: 90%;
+}
+.bt1:hover,
+.bt2:hover,
+.bt3:hover,
+.bt4:hover,
+.bt5:hover{
+    width: 35px;
+}
+
+
+h2{
+    margin-bottom: 10px;
+}
+.note {
+    position: relative;
+    float: left;
+    height: 20px;
+    width: 108px;
+    background-color: skyblue;
+    border-radius: 10px;
+    margin: 3px 3px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.note::after{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255,255,255);
+    opacity: 0;
+    z-index: 1;
+    border-radius: 10px;
+    content: '';
+    transition: all 0.4s;
+}
+.note:hover::after {
+    top: -4px;
+    left: -10%;
+    height: 28px;
+    width: 120%;
+    opacity: 0.5;
+}
+.current-note {
+    background-color: green;
+}
+
+.note4 {
+    width: 222px;
+}
+.note5 {
+    width: 336px;
+}
+.note6 {
+    width: 450px;
+}
+.note2 {
+    width: 51px;
+}
+.note1 {
+    width: 22px;
+}
+.note-dot{
+    width: 165px;
+}
+.button-controler {
+    position: absolute;
+    background-color: #fff;
+    width: 10px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    right: -10px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 1px 60px 60px 1px;
+    cursor: pointer;
+    user-select: none;
+}
+p{
+    overflow: hidden;
+}

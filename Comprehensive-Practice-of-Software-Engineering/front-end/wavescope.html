@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>在线音波图展示</title>
+    <link rel="stylesheet" href="/static/CSS/base-style.css">
+    <link rel="stylesheet" href="/static/CSS/wave.css">
+    <script src="/static/JavaScript/wave/recorder-core.js"></script>
+    <script src="/static/JavaScript/wave/mp3.js"></script>
+    <script src="/static/JavaScript/wave/mp3-engine.js"></script>
+    <script src="/static/JavaScript/wave/wave.js"></script>
+    <script src="/static/JavaScript/wavepage.js"></script>
+
+
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="/Myapp_runweb/home"><span class="home-label">听音撰谱主页</span></a>
+        <div class="lable-contaner clearfix">
+            <a href="/Myapp_runweb/metronome">
+                <li class="label lab1">网页节拍器</li>
+            </a>
+            <a href="/Myapp_runweb/wavescope">
+                <li class="label lab2 current-lable">在线音波图展示</li>
+            </a>
+            <a href="/Myapp_runweb/str2musicscore">
+                <li class="label lab3">字符串生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/file2musicscore">
+                <li class="label lab4">音频文件生成乐谱</li>
+            </a>
+            <a href="/Myapp_runweb/pianoOnLine">
+                <li class="label lab5">HTML5网页钢琴</li>
+            </a>
+        </div>
+        <a href="{{ login_or_logout }}">
+            {% if user_name %}
+            <span style="float: right;" class="state"onclick="return func()">登出</span>
+            {% else %}
+            <span style="float: right;" class="state">登录</span>
+            {% endif %}
+        </a>
+        <a href="/Myapp_runweb/pianoOnLine" style="float: right;" class="username">
+            {% if user_name %}
+            <span>{{user_name}}</span>
+            {% else %}
+            <span>游客</span>
+            {% endif %}
+        </a>
+        <script>
+            function func() {
+                if (!confirm('是否确认登出')) {
+                    return false;
+                }
+            }
+        </script>
+    </header>
+    <div class="main">
+
+
+        <div class="mainBox">
+            <div class="pd btns">
+                <div>
+                    <button onclick="recOpen()" style="margin-left:5px">打开录音,请求权限</button>
+                    <button onclick="recClose()" style="margin-left:185px">关闭录音,释放资源</button>
+                </div>
+
+                <button onclick="recStart()" style="margin-left:5px">录制</button>
+                <button onclick=" recStop()" style="margin-right:130px">停止</button>
+
+                <span style="display: inline-block;">
+                    <button onclick="recPause()">暂停</button>
+                    <button onclick="recResume()">继续</button>
+                </span>
+                <span style="display: inline-block;">
+                    <button onclick="recPlay()" >播放</button>
+                    <button onclick="recUpload()" style="visibility: hidden;">上传</button>
+                </span>
+
+            </div>
+
+
+            <div class="pd recpower">
+                <div
+                    style="height:40px;width:600px;background:rgb(221, 219, 219);position:relative;  border-radius: 20px;">
+                    <div class="recpowerx"></div>
+                    <div class="recpowert" style="padding-left:50px; line-height:40px; position: relative;"></div>
+                </div>
+            </div>
+            <div class="pd waveBox">
+                <div style="border:1px solid #ccc;display:inline-block;border-radius: 10px; margin: 0 auto;">
+                    <div class="recwave"></div>
+                </div>
+            </div>
+        </div>
+        <a href="/static/RAR/wave.rar">
+            <div class="download" style="text-align: center;">始终无法打开权限？点击下载离线版本</div>
+        </a>
+        <div class="mainBox">
+            <div class="reclog"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
