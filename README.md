@@ -20,7 +20,7 @@ This repository shows all my valuable homework during college life. Most of them
 - [人工智能 (Artificial Intelligence)](Artificial-Intelligence/README.md)
 - [软件体系结构 (Software Architecture)](Software-Architecture/README.md)
 - [软件工程综合实习 (Comprehensive Practice of Software Engineering)](Comprehensive-Practice-of-Software-Engineering/README.md)
-- [地理信息系统 & 大数据 (Geographical Information System & Big Data)](GIS-&-Big-Data\README.md)
+- [地理信息系统 & 大数据 (Geographical Information System & Big Data)](GIS-&-Big-Data/README.md)
 
 
 
